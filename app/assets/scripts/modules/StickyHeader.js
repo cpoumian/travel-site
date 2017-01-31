@@ -3,23 +3,24 @@ import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoi
 import smoothScroll from 'jquery-smooth-scroll';
 
 class StickyHeader {
-	constructor() {
-		this.lazyImages = $(".lazyload");
-		this.siteHeader = $(".site-header");
-		this.headerTriggerElement = $(".large-hero__title");
-		this.createHeaderWaypoint();
-		this.pageSections= $(".page-section");
-		this.headerLinks = $(".primary-nav a");
-		this.createPageSectionWaypoints();
-		this.addSmoothScrolling();
-		this.refreshWaypoints();
-	}
+  constructor() {
+    this.lazyImages = $(".lazyload");
+    this.siteHeader = $(".site-header");
+    this.headerTriggerElement = $(".large-hero__title");
+    this.createHeaderWaypoint();
+    this.pageSections = $(".page-section");
+    this.headerLinks = $(".primary-nav a");
+    this.createPageSectionWaypoints();
+    this.addSmoothScrolling();
+    this.refreshWaypoints();
+  }
 
-	refreshWaypoints() {
-		this.lazyImages.load(function() {
-			Waypoint.refreshAll();
-		});
-	}
+  refreshWaypoints() {
+  	debugger;
+    this.lazyImages.load(function() {
+      Waypoint.refreshAll();
+    });
+  }
 
 	addSmoothScrolling() {
 		this.headerLinks.smoothScroll();
